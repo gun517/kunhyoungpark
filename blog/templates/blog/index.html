@@ -41,6 +41,16 @@ body {
     </div>
 </div>
 
+    <ul>
+    {% for post in post_list %}
+      <li>
+      <a href ="{% url "blog.views.post_detail" post.pk %}">
+        {{ post.title }}
+      </a>
+      </li>
+    {% endfor %}
+    </ul>
+
 <div class="footer">
     <div class="container">
         <p class="text-muted">Place sticky footer content here.</p>

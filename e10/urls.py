@@ -21,8 +21,8 @@ from blog import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.index),
-    url(r'^(?P<pk>\d+)/$', views.post_detail),
+    url(r'^$', views.index, name ='index'),
+    url(r'^(?P<pk>\d+)/$', views.post_detail, name ='post_detail'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
